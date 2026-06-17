@@ -3255,6 +3255,12 @@ ul {
   background-size: cover;
 }
 
+/* Fix for gallery overlay issue */
+.gallery_part .filtr-container {
+  overflow: auto;
+  display: flow-root;
+}
+
 /**************** services css start ****************/
 /* line 4, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_services.scss */
 .our_service .single_offer_img img {
