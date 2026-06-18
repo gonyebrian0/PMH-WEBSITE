@@ -58,12 +58,12 @@
     }
   });
 
-  // $('.img-gal').magnificPopup({
-  //   type: 'image',
-  //   gallery: {
-  //     enabled: true
-  //   }
-  // });
+  $('.img-gal').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
+  });
 
   // Search Toggle
   $("#search_input_box").hide();

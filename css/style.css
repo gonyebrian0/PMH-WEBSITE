@@ -2324,7 +2324,7 @@ ul {
   width: 100%;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   top: 0;
-  background-color: #ff4800;
+  background-color: #ff0000;
 }
 
 /* line 68, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_menu.scss */
@@ -2334,7 +2334,7 @@ ul {
 
 /* line 72, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_menu.scss */
 .menu_fixed .active_color {
-  color: #ff4800 !important;
+  color: #ff0000 !important;
 }
 
 /* line 76, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_menu.scss */
@@ -2551,7 +2551,7 @@ ul {
 
 /* line 52, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_banner.scss */
 .banner_part .banner_text h1 span {
-  color: #ff4800;
+  color: #ff0000;
 }
 
 /* line 57, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_banner.scss */
@@ -3132,14 +3132,14 @@ ul {
 
 /* line 160, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
 .gallery_part .single_gallery_item:hover .gallery_item_text {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* line 165, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
 .gallery_part .single_gallery_item:hover .single_gallery_item_iner:after {
-  opacity: 1;
-  transform: scale(1);
+  opacity: 0;
+  transform: scale(0.7);
 }
 
 /* line 175, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
