@@ -8,6 +8,133 @@ body {
   padding: 0;
   margin: 0;
   font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #0f1318;
+  color: #f5f5f5;
+}
+
+body.dark-mode .main_menu,
+body.dark-mode .single_pricing_part,
+body.dark-mode .footer-area,
+body.dark-mode .breadcrumb,
+body.dark-mode .about_us_text,
+body.dark-mode .single_offer_text,
+body.dark-mode .single-footer-widget,
+body.dark-mode .contact-section,
+body.dark-mode .portfolio-filter ul li,
+body.dark-mode .single_service_text,
+body.dark-mode .single_blog_item,
+body.dark-mode .single_blog_item .blog_item_text,
+body.dark-mode .quote-contact-modal .modal-content {
+  background-color: #161b22;
+  color: #f5f5f5;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .section_tittle h2 {
+  color: #f5f5f5;
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode .pricing_content ul li,
+body.dark-mode .single-footer-widget p,
+body.dark-mode .single-footer-widget li a,
+body.dark-mode .nav-link,
+body.dark-mode .navbar-light .navbar-nav .nav-link,
+body.dark-mode .section_tittle p {
+  color: #d8d8d8;
+}
+
+body.dark-mode .btn_1,
+body.dark-mode .btn_2,
+body.dark-mode .dark-mode-toggle,
+body.dark-mode .quote-option {
+  background-color: #ff4800;
+  border-color: #ff4800;
+  color: #fff;
+}
+
+body.dark-mode .btn_1:hover,
+body.dark-mode .btn_2:hover,
+body.dark-mode .dark-mode-toggle:hover,
+body.dark-mode .quote-option:hover {
+  background-color: #e03d00;
+  border-color: #e03d00;
+  color: #fff;
+}
+
+body.dark-mode .portfolio-filter ul li.active {
+  color: #ff4800 !important;
+}
+
+body.dark-mode .gallery_part .single_gallery_item .single_gallery_item_iner:after,
+body.dark-mode .gallery_part .single_gallery_item .single_gallery_item_iner .gallery_item_text,
+body.dark-mode .gallery_part .single_gallery_item:hover .gallery_item_text,
+body.dark-mode .gallery_part .single_gallery_item:hover .single_gallery_item_iner:after {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+  transform: none !important;
+}
+
+.dark-mode-toggle {
+  margin-left: 1rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #111;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  opacity: 0.9;
+}
+
+.quote-contact-modal .modal-content {
+  border: 0;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.quote-contact-modal .quote-contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.quote-contact-modal .quote-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+}
+
+.gallery_part .single_gallery_item .single_gallery_item_iner:after,
+.gallery_part .single_gallery_item .single_gallery_item_iner .gallery_item_text,
+.gallery_part .single_gallery_item:hover .gallery_item_text,
+.gallery_part .single_gallery_item:hover .single_gallery_item_iner:after {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+  transform: none !important;
 }
 
 /* line 9, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_common.scss */
