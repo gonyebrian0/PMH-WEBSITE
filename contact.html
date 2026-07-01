@@ -110,6 +110,7 @@
         <div class="col-lg-8">
           <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
             novalidate="novalidate">
+            <div id="form-status" class="alert" role="alert" style="display:none;"></div>
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
@@ -129,6 +130,12 @@
                 <div class="form-group">
                   <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter email address'" placeholder='Enter email address'>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input class="form-control" name="number" id="number" type="tel" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter phone number'" placeholder='Enter phone number'>
                 </div>
               </div>
               <div class="col-12">
@@ -314,6 +321,26 @@
   <script src="js/mail-script.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var status = params.get('status');
+      var statusBox = document.getElementById('form-status');
+
+      if (!statusBox || !status) {
+        return;
+      }
+
+      statusBox.style.display = 'block';
+      if (status === 'success') {
+        statusBox.className = 'alert alert-success';
+        statusBox.textContent = 'Your message has been sent successfully. We will get back to you soon.';
+      } else {
+        statusBox.className = 'alert alert-danger';
+        statusBox.textContent = 'Sorry, your message could not be sent. Please try again or contact us directly.';
+      }
+    })();
+  </script>
 </body>
 
 </html>

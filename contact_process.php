@@ -26,6 +26,7 @@
 	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
 	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
 	$body .= "</tr>";
+	$body .= "<tr><td style='border:none;'><strong>Phone:</strong> {$number}</td></tr>";
 	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$subject}</td></tr>";
 	$body .= "<tr><td></td></tr>";
 	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
@@ -33,5 +34,12 @@
 	$body .= "</body></html>";
 
     $send = mail($to, $email_subject, $body, $headers);
+
+    if ($send) {
+        header("Location: contact.html?status=success");
+    } else {
+        header("Location: contact.html?status=error");
+    }
+    exit;
 
 ?>
