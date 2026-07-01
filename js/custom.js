@@ -116,6 +116,28 @@
       console.warn('Unable to load theme preference', error);
       applyTheme('light');
     }
+    
+    // Initialize Masonry layout for gallery if available
+    var $grid = $('.gallery_part .filtr-container');
+    var msnry = null;
+    if ($grid.length && typeof $.fn.masonry !== 'undefined') {
+      msnry = $grid.masonry({
+        itemSelector: '.img-gal',
+        columnWidth: '.img-gal',
+        percentPosition: true
+      });
+
+      // ensure layout after each image loads
+      $grid.find('img').each(function () {
+        if (this.complete) {
+          $grid.masonry('layout');
+        } else {
+          $(this).on('load', function () {
+            $grid.masonry('layout');
+          });
+        }
+      });
+    }
   });
   // menu fixed js code
   $(window).scroll(function () {
@@ -150,21 +172,23 @@
   }
   mailChimp();
 
-  var filter_item = $('.filtr-container');
-  if (filter_item.length) {
-    var filterizd = filter_item.filterizr({
-      layout: 'packed',
-  
-    });
-  }
-
-
-
-
-
   $('.portfolio-filter ul li').on('click', function () {
     $('.portfolio-filter ul li').removeClass('active');
     $(this).addClass('active');
+
+    var filterValue = $(this).data('filter');
+    $('.gallery_part .img-gal').each(function () {
+      var category = $(this).data('category');
+      var shouldShow = filterValue === 'all' || category === filterValue;
+      $(this).toggleClass('is-hidden', !shouldShow);
+    });
+    try {
+      if (typeof $grid !== 'undefined' && $grid.length && typeof $grid.masonry === 'function') {
+        setTimeout(function () { $grid.masonry('layout'); }, 50);
+      }
+    } catch (e) {
+      // ignore
+    }
   });
 
   $(document).on('click', '.single_pricing_part .btn_2', function (e) {

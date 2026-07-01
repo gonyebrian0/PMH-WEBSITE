@@ -3382,10 +3382,71 @@ ul {
   background-size: cover;
 }
 
-/* Fix for gallery overlay issue */
+/* Masonry-friendly gallery layout */
 .gallery_part .filtr-container {
-  overflow: auto;
-  display: flow-root;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.gallery_part .filtr-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.gallery_part .img-gal {
+  width: 25%;
+  float: left;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery_part .img-gal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery_part .img-gal.width-1 {
+  width: 33.3333%;
+}
+
+.gallery_part .img-gal.width-2 {
+  width: 42%;
+}
+
+.gallery_part .img-gal.is-hidden {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .gallery_part .filtr-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery_part .img-gal,
+  .gallery_part .img-gal.width-1,
+  .gallery_part .img-gal.width-2 {
+    grid-column: span 1;
+    height: auto;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery_part .filtr-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery_part .img-gal,
+  .gallery_part .img-gal.width-1,
+  .gallery_part .img-gal.width-2 {
+    grid-column: span 1;
+    height: auto;
+    min-height: 0;
+  }
 }
 
 /**************** services css start ****************/
