@@ -4327,3 +4327,16 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #90caf9; /* Links look nice in light blue */
+}
+
+body.dark-mode .box {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
