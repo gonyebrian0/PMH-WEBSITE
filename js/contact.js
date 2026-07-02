@@ -55,11 +55,12 @@ $(document).ready(function(){
                 }
             },
             submitHandler: function(form) {
+                var statusBox = $('#form-status');
+                statusBox.hide();
                 $(form).ajaxSubmit({
-                    type:"POST",
-                    data: $(form).serialize(),
-                    url:"contact_process.php",
-                    success: function() {
+                    type: "POST",
+                    url: "contact_process.php",
+                    success: function(response) {
                         $('#contactForm :input').attr('disabled', 'disabled');
                         $('#contactForm').fadeTo( "slow", 1, function() {
                             $(this).find(':input').attr('disabled', 'disabled');

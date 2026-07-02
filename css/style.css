@@ -6147,6 +6147,63 @@ h6 {
   color: #8a8a8a;
 }
 
+.contact-cta-row {
+  margin-bottom: 32px;
+}
+
+.contact-cta-box {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(124, 50, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 18px 36px rgba(28, 33, 98, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-align: left;
+  color: #2a2a2a;
+}
+
+.contact-cta-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(28, 33, 98, 0.1);
+  border-color: rgba(124, 50, 255, 0.22);
+  text-decoration: none;
+}
+
+.contact-cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: rgba(124, 50, 255, 0.12);
+  color: #7c32ff;
+  font-size: 24px;
+}
+
+.contact-cta-box h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contact-cta-box p {
+  margin-bottom: 0;
+  color: #6b6b6b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+  .contact-cta-box {
+    padding: 22px 18px;
+  }
+}
+
 /*=================== contact banner end ====================*/
 /*=================== contact form start ====================*/
 /* line 39, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_contact.scss */
