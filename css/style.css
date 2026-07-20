@@ -3339,14 +3339,26 @@ ul {
 }
 
 /* line 175, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
+.gallery_part .filtr-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
 .gallery_part .img-gal {
   width: 25%;
+  flex: 0 0 25%;
+  display: block;
+  position: relative;
+  float: none;
+  overflow: hidden;
 }
 
 @media (max-width: 576px) {
   /* line 175, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .img-gal {
     width: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -3354,6 +3366,7 @@ ul {
   /* line 175, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .img-gal {
     width: 50%;
+    flex-basis: 50%;
   }
 }
 
@@ -3361,13 +3374,20 @@ ul {
   /* line 175, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .img-gal {
     width: 50%;
+    flex-basis: 50%;
   }
 }
 
 /* line 193, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
 .gallery_part .img-gal {
   height: 650px;
-  float: left;
+}
+
+.gallery_part .img-gal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 991px) {
@@ -3387,12 +3407,14 @@ ul {
 /* line 203, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
 .gallery_part .width-1 {
   width: 33%;
+  flex-basis: 33%;
 }
 
 @media (max-width: 576px) {
   /* line 203, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .width-1 {
     width: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -3400,6 +3422,7 @@ ul {
   /* line 203, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .width-1 {
     width: 50%;
+    flex-basis: 50%;
   }
 }
 
@@ -3407,12 +3430,14 @@ ul {
   /* line 203, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .width-1 {
     width: 50%;
+    flex-basis: 50%;
   }
 }
 
 /* line 219, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
 .gallery_part .width-2 {
   width: 42%;
+  flex-basis: 42%;
   border-right: 0 solid #fff;
 }
 
@@ -3420,6 +3445,7 @@ ul {
   /* line 219, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .width-2 {
     width: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -3427,6 +3453,7 @@ ul {
   /* line 219, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .width-2 {
     width: 50%;
+    flex-basis: 50%;
   }
 }
 
@@ -3434,6 +3461,7 @@ ul {
   /* line 219, ../../01 cl html template/187 Shotgear Photography/187 Shotgear Photography Html/sass/_gallery_part.scss */
   .gallery_part .width-2 {
     width: 50%;
+    flex-basis: 50%;
   }
 }
 
@@ -3452,16 +3480,16 @@ ul {
 }
 
 .gallery_part .filtr-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
   width: 100%;
   position: relative;
-  grid-auto-flow: dense;
 }
 
 .gallery_part .img-gal {
   width: 100%;
+  flex: 0 0 100%;
   float: none;
   box-sizing: border-box;
   padding: 0;
@@ -3477,11 +3505,13 @@ ul {
 }
 
 .gallery_part .img-gal.width-1 {
-  grid-column: span 2;
+  flex-basis: 66.666%;
+  width: 66.666%;
 }
 
 .gallery_part .img-gal.width-2 {
-  grid-column: span 2;
+  flex-basis: 83.333%;
+  width: 83.333%;
 }
 
 .gallery_part .img-gal.is-hidden {
@@ -3489,19 +3519,19 @@ ul {
 }
 
 @media (max-width: 991px) {
-  .gallery_part .filtr-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .gallery_part .img-gal.width-1,
   .gallery_part .img-gal.width-2 {
-    grid-column: span 1;
+    flex-basis: 50%;
+    width: 50%;
   }
 }
 
 @media (max-width: 576px) {
-  .gallery_part .filtr-container {
-    grid-template-columns: 1fr;
+  .gallery_part .img-gal,
+  .gallery_part .img-gal.width-1,
+  .gallery_part .img-gal.width-2 {
+    flex-basis: 100%;
+    width: 100%;
   }
 
   .gallery_part .img-gal,
