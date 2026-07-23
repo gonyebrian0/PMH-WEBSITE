@@ -157,7 +157,7 @@
     var filterValue = $(this).data('filter');
     $('.gallery_part .img-gal').each(function () {
       var category = $(this).data('category');
-      var shouldShow = filterValue === 'all' || category === filterValue;
+      var shouldShow = filterValue === 'all' || String(category) === String(filterValue);
       $(this).toggleClass('is-hidden', !shouldShow);
     });
   });
